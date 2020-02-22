@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400');
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 5%);
+}
+
+g {
+    display: none;
+}
+
+canvas {
+    background-color: #666;
+    height: 10vh;
+    width: 10vw;
+}
