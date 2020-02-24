@@ -12,16 +12,61 @@ const dateFormatter = new Intl.DateTimeFormat("et", {
     year: "numeric"
 });
 
-function date() {
+const dateFormatterRu = new Intl.DateTimeFormat("ru", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+});
 
-    const dateElement = document.getElementById("date");
+let tabTitleTimer;
+let russianTimer;
+let estonianTimer;
+
+const bg = document.getElementById("bg")
+
+bg.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    document.body.style.backgroundImage = "url(mount.jpg)";
+  } else {
+    document.body.style.backgroundImage = "unset";
+  }
+});
+
+const tabTitle = document.getElementById("tabTitle")
+
+tabTitle.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    tabTitleTimer = setInterval(timeTitle, 50);
+  } else {
+    clearInterval(tabTitleTimer);
+    document.title = "Kell";
+  }
+});
+
+function timeTitle() {
     const date = Date.now();
-    // Mugavalt vormistab kuupäeva
-    const formattedDate = dateFormatter.format(date);
-
-    dateElement.innerHTML = "Täna on " + formattedDate;
-
     const formattedTime = timeFormatter.format(date);
+    document.title = formattedTime;
+}
+
+const russian = document.getElementById("russian")
+
+russian.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    clearInterval(estonianTimer);
+    date("ru")
+    russianTimer = setInterval(() => date("ru"), 1000);
+  } else {
+    clearInterval(russianTimer);
+    date("ee")
+    estonianTimer = setInterval(() => date("ee"), 1000);
+  }
+});
+
+function time() {
+
+    const formattedTime = timeFormatter.format(Date.now());
 
     let count = 1;
     for (const char of formattedTime) {
@@ -35,9 +80,24 @@ function date() {
     }
 }
 
+function date(lang) {
+    const dateElement = document.getElementById("date");
+    const date = Date.now();
+
+    // Mugavalt vormistab kuupäeva
+    if (lang === "ee") {
+        const formattedDate = dateFormatter.format(date);
+        dateElement.innerHTML = "Täna on " + formattedDate;
+    } else if (lang === "ru") {
+        const formattedDate = dateFormatterRu.format(date);
+        dateElement.innerHTML = "Сегодня " + formattedDate;
+    }
+}
+
 // See jookseb async esimesel jooksutamisel
 // kuid ma ei ole kindel kas setInterval on async
 setTimeout(() => {
-    date();
-    setInterval(date, 1000);
+    time();
+    setInterval(time, 50);
+    estonianTimer = setInterval(() => date("ee"), 1000);
 });

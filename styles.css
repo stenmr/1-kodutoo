@@ -20,13 +20,14 @@ body {
     background-image: url(mount.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #06304c;
+    background-color: #7fabc3;
+    transition: 0.2s;
 }
 
 #wrapper {
     display: grid;
     grid-template-rows: [row-start] auto [row-mid] 1fr [row-end] auto;
-    grid-template-columns: [col-start] 1fr [col-mid] 4fr [col-end] 1fr;
+    grid-template-columns: [col-start] 1fr [col-mid] 6fr [col-end] 1fr;
 }
 
 div > div {
@@ -60,4 +61,8 @@ canvas {
     padding: 4vmin;
     letter-spacing: initial;
     grid-area: row-end / col-mid;
+}
+
+#options > input[type="checkbox"] {
+    margin: 0 2vmin 0 0.5vmin; 
 }
