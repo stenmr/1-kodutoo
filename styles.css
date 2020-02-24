@@ -25,19 +25,19 @@ body {
 
 #wrapper {
     display: grid;
-    grid-template-rows: [row-start] auto [row-mid] 50% [row-end] auto;
-    grid-template-columns: [col-start] auto [col-mid] 80% [col-end] auto;
+    grid-template-rows: [row-start] auto [row-mid] 1fr [row-end] auto;
+    grid-template-columns: [col-start] 1fr [col-mid] 4fr [col-end] 1fr;
 }
 
-#wrapper > * {
+div > div {
     background-color: var(--background-color);
     padding: 4vmin;
     box-shadow: 0 0.75rem 2rem hsla(220, 14%, 30%, 0.33);
+    margin: 2vw 0 2vw 0;
 }
 
-
-h1 {
-    font-size: 5ch;
+#date {
+    font-size: 6ch;
     color: var(--text-color);
     grid-area: row-start / col-mid;
 }
@@ -45,7 +45,6 @@ h1 {
 #clock {
     grid-area: row-mid / col-mid;
     display: flex;
-    align-self: center;
 }
 
 canvas {
@@ -53,4 +52,12 @@ canvas {
     margin: auto;
     height: 16vmin;
     width: 8vmin;
+    padding: 1vmin;
+    background-color: var(--text-color);
+}
+
+#options {
+    padding: 4vmin;
+    letter-spacing: initial;
+    grid-area: row-end / col-mid;
 }
