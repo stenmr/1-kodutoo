@@ -66,15 +66,3 @@ canvas {
 #options > input[type="checkbox"] {
     margin: 0 2vmin 0 0.5vmin; 
 }
-
-#name {
-    letter-spacing: initial;
-    font-size: 2rem;
-    color: var(--text-color);
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
-    padding: 1.5vmin;
-    background-color: var(--background-color);
-    box-shadow: 0 0.75rem 2rem hsla(220, 14%, 30%, 0.33);
-}
