@@ -37,7 +37,7 @@ const tabTitle = document.getElementById("tabTitle")
 
 tabTitle.addEventListener("change", (event) => {
   if (event.target.checked) {
-    tabTitleTimer = setInterval(timeTitle, 50);
+    tabTitleTimer = setInterval(timeTitle, 1000);
   } else {
     clearInterval(tabTitleTimer);
     document.title = "Kell";
