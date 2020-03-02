@@ -6,7 +6,7 @@
 
 Olemas on kell ning all on olemas kolm kasti mille peale saab vajutades saab muuta atribuute lehekülge.
 
-Kell on renderdatud isetehtud SVG failiga, kus ma disainisin numbrid ise Illustratoris, sest tahtsin õppida kuidas SVG faile kasutada veebis.
+Kell on renderdatud SVG failiga, kus ma disainisin numbrid ise Illustratoris, sest tahtsin õppida kuidas SVG faile kasutada veebis. Algselt olid kõik numbrid eraldi SVG failid aga selgus, et neid ei laeta piisavalt kiiresti, seetõttu panin kõik ühte faili.
 
 Mul ei olnud väga suurt motivatsiooni lisada sätteid ja nuppe leheküljele, sest tundsin, et kell oli juba hästi arusaadav. 
 
