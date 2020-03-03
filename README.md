@@ -15,6 +15,7 @@ Nupud:
 * Taustapilt: lülitab taustapildi sisse või välja
 * Kell tab-i title-is: saab tab-i title-is kella näha
 * Pусский язык: lülitab kuupäeva vene keelde
+* Värvimuutja: Kursori asukoha järgi värvi muutmine
 
 ### Autor
 
