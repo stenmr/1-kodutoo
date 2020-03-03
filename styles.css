@@ -2,7 +2,7 @@
 
 :root {
     --text-color: #333;
-    --background-color: aliceblue;
+    --background-color: #dfedf8;
 }
 
 @media (prefers-color-scheme: dark) {
